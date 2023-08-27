@@ -23,7 +23,7 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       /* .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); } */
+      .attribution a { color: hsl(228, 45%, 44%); } */
       body {
         background: #ecf2f8;
         display: flex;
@@ -74,6 +74,11 @@
         gap: 20px;
       }
 
+      .author-name {
+        display: flex;
+        gap: 120px;
+      }
+
       .author-name span {
         color: #48556a;
         font-weight: 700;
@@ -89,9 +94,50 @@
         border-radius: 100%;
         width: 40px;
       }
-      .share-icon img {
-        padding-left: 130px;
+
+      .share-button {
+        position: relative;
+        border-radius: 50%;
+        padding: 5px;
+        height: 25px;
+        background-color: #ecf2f8;
+        cursor: pointer;
+      }
+
+      .share-button img {
+        height: 25px;
+      }
+
+      .social-icons {
+        position: absolute;
+        top: -60px;
+        left: -120px;
+        background-color: #48556a;
+        display: none;
+        border-radius: 10px;
+      }
+
+      .share-button:hover .social-icons {
+        display: flex;
+      }
+      .share-button--white {
+        display: none;
+        position: absolute;
+        background-color: #48556a;
+      }
+
+      .icon {
+        display: block;
+
+        margin: 10px 10px;
+        text-decoration: none;
+      }
+      .icon-text {
+        color: #6d7f97;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
         padding-top: 10px;
+        padding-left: 10px;
       }
     </style>
   </head>
@@ -117,11 +163,30 @@
             <img src="images/avatar-michelle.jpg" alt="picture of michelle" />
           </div>
           <div class="author-name">
-            <span>Michelle Appleton</span>
-            <p>28 Jun 2020</p>
-          </div>
-          <div class="share-icon">
-            <img src="images/icon-share.svg" alt="share-icon" />
+            <div class="author-name--modify">
+              <span>Michelle Appleton</span>
+              <p>28 Jun 2020</p>
+            </div>
+            <div class="share-button">
+              <img src="images/icon-share.svg" alt="share-icon" />
+              <img
+                class="share-button--white"
+                src="images/icon-share-white.svg"
+                alt="share-icon-white"
+              />
+              <div class="social-icons">
+                <p class="icon-text">Share</p>
+                <a href="#" class="icon"
+                  ><img src="images/icon-facebook.svg" alt=""
+                /></a>
+                <a href="#" class="icon"
+                  ><img src="images/icon-twitter.svg" alt=""
+                /></a>
+                <a href="#" class="icon"
+                  ><img src="images/icon-pinterest.svg" alt=""
+                /></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
